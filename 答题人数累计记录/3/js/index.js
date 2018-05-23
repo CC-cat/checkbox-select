@@ -5,63 +5,80 @@ $(function(){
 
 });
 
+var _t1;
+
 var _goToEnd = function(){
+	var a=b=c=d=0;
+
 	$("._goToEnd").on("click", function(){
 		$(this).css("color","#fff");
 		$(this).css("background","#00B895");
 
-		setTimeout(function(){
-			$("._goToEnd").css("color","");
-			$("._goToEnd").css("background","");
-		},3000);
+		var _i = $("input[type=checkbox]:checked").length;
 
+		if ( _i < 1 || _i == 1) {
+			alert("请完成答题！");
+			clearTimeout(_t1);
+		};
+
+		$('input[type=checkbox]').each(function(i,v){
+
+			console.log($("input[type=checkbox]:checked").length);
+
+			if (v.checked==true){
+					switch (v.value) {
+						case 'A':
+							a+=1;
+							break;
+						case 'B':
+							b+=1;
+							break;
+						case 'C':
+							c+=1;
+							break;
+						case 'D':
+							d+=1;
+							break;
+						default:
+
+					};
+
+			};
+		});
+
+		console.log(a+' '+b+' '+c+' '+d+' ');
 		console.log("恭喜您~完成答题！");
+
+		$("._a").html(a);
+		$("._b").html(b);
+		$("._c").html(c);
+		$("._d").html(d);
+
+		_t1 = setTimeout(function(){
+			a=b=c=d=0;
+		},1000);
+
+		_reset();
 	});
 };
 
 
-var _count_box = function(num) {
-	var _count = {
-		_A: num,
-		_B: num,
-		_C: num,
-		_D: num,
-	}
+var _reset = function(){
+	setTimeout(function(){
+		$("._goToEnd").css("color","");
+		$("._goToEnd").css("background","");
+		$('input[type=checkbox]').prop("checked", false);
+	},1000);
 };
-
 
 var _select = function(){
-	$("._box[lang='1'] ._select label").on("click", function(){
-		$("._box[lang='1'] ._select li").attr("_active","0");
-		$(this).parent("li").attr("_active","1");
-
-		var index = $(this).parent("li").index();
-		console.log("index: "+index);
-
-		var _a = $(this).parent("li").attr("_active");
-
-
-	});
-
-	$("._box[lang='2'] ._select label").on("click", function(){
-		$("._box[lang='2'] ._select li").attr("_active","0");
-		$(this).parent("li").attr("_active","1");
-
-		var index = $(this).parent("li").index();
-		console.log("index: "+index);
-
-		var _a = $(this).parent("li").attr("_active");
-
-	});
-
-  _checkboxOne($('._box').eq(0));
- 	_checkboxOne($('._box').eq(1));
+  _checkedOne($('._box').eq(0));
+ 	_checkedOne($('._box').eq(1));
 };
 
 
-var _checkboxOne = function(_name){
+var _checkedOne = function(_name){
 	_name.find('input[type=checkbox]').bind('click', function(){
       _name.find('input[type=checkbox]').not(this).attr("checked", false);
    });
 };
-

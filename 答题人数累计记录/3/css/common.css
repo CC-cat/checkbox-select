@@ -17,9 +17,7 @@
 }
 
 ._box ul li {
-	/*list-style: upper-latin;*/
 	list-style: none;
-	padding: 10px 4px;
 }
 
 ._box ul li:hover {
@@ -28,7 +26,10 @@
 
 ._box ul li,
 ._box ul li label,
-._box ul li input { cursor: pointer; }
+._box ul li input {
+	cursor: pointer;
+	padding: 10px 4px;
+}
 
 ._box {
 	overflow: hidden;
@@ -51,6 +52,11 @@
 
 ._end p {
 	padding-left: 40px;
+}
+
+._end p span {
+	color: rgb(65,155,249);
+	font-size: 18px;
 }
 
 
