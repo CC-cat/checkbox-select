@@ -4,9 +4,13 @@
 	<title></title>
 	<link rel="stylesheet" href="css/common.css">
 	<script src="http://code.jquery.com/jquery.js"></script>
-	<script src="js/index1.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body>
+	<section class="_btn">
+		<div class="_goToEnd">完成答题</div>
+		<div class="_goToStart">重新答题</div>
+	</section>
 	<div class="_container">
 		<section>
 			<h1 class="_title">选择您喜欢的旅游胜地</h1>
@@ -14,56 +18,103 @@
 		<section class="_content">
 			<div class="_box" lang="1">
 				<h3>1.题目*</h3>
-				<ul class="_select">
+				<ul class="_select subject1">
 					<li>
-						<input id="q1_1" type="checkbox" value="A">
+						<input id="q1_1" type="radio" name="q1" value="A">
 	          <label for="q1_1">A.选项1</label>
 					</li>
 					<li>
-						<input id="q1_2" type="checkbox" value="B">
+						<input id="q1_2" type="radio" name="q1" value="B">
 	          <label for="q1_2">B.选项2</label>
 					</li>
 					<li>
-						<input id="q1_3" type="checkbox" value="C">
+						<input id="q1_3" type="radio" name="q1" value="C">
 	          <label for="q1_3">C.选项3</label>
 					</li>
 					<li>
-						<input id="q1_4" type="checkbox" value="D">
+						<input id="q1_4" type="radio" name="q1" value="D">
 	          <label for="q1_4">D.选项4</label>
 					</li>
 				</ul>
 			</div>
 			<div class="_box" lang="2">
 				<h3>2.题目*</h3>
-				<ul class="_select">
+				<ul class="_select subject2">
 					<li>
-						<input id="q2_1" type="checkbox" value="A">
+						<input id="q2_1" type="radio" name="q2" value="A">
 	          <label for="q2_1">A.选项1</label>
 					</li>
 					<li>
-						<input id="q2_2" type="checkbox" value="B">
+						<input id="q2_2" type="radio" name="q2" value="B">
 	          <label for="q2_2">B.选项2</label>
 					</li>
 					<li>
-						<input id="q2_3" type="checkbox" value="C">
+						<input id="q2_3" type="radio" name="q2" value="C">
 	          <label for="q2_3">C.选项3</label>
 					</li>
 					<li>
-						<input id="q2_4" type="checkbox" value="D">
+						<input id="q2_4" type="radio" name="q2" value="D">
 	          <label for="q2_4">D.选项4</label>
+					</li>
+				</ul>
+			</div>
+			<div class="_box" lang="3">
+				<h3>3.题目*<span>（多选题）</span>	</h3>
+				<ul class="_select subject3">
+					<li>
+						<input id="q3_1" type="checkbox" name="q3" value="A">
+	          <label for="q3_1">A.选项1</label>
+					</li>
+					<li>
+						<input id="q3_2" type="checkbox" name="q3" value="B">
+	          <label for="q3_2">B.选项2</label>
+					</li>
+					<li>
+						<input id="q3_3" type="checkbox" name="q3" value="C">
+	          <label for="q3_3">C.选项3</label>
+					</li>
+					<li>
+						<input id="q3_4" type="checkbox" name="q3" value="D">
+	          <label for="q3_4">D.选项4</label>
+					</li>
+					<li>
+						<input id="q3_5" type="checkbox" name="q3" value="E">
+	          <label for="q3_5">E.选项5</label>
+					</li>
+					<li>
+						<input id="q3_6" type="checkbox" name="q3" value="F">
+	          <label for="q3_6">F.选项6</label>
+					</li>
+					<li>
+						<input id="q3_7" type="checkbox" name="q3" value="G">
+	          <label for="q3_7">G.选项7</label>
+					</li>
+					<li>
+						<input id="q3_8" type="checkbox" name="q3" value="H">
+	          <label for="q3_8">H.选项8</label>
 					</li>
 				</ul>
 			</div>
 		</section>
 		<section class="_content">
-			<div class="_btn _goToEnd">完成答题</div>
-			<div class="_btn _goToStart">重新答题</div>
 			<div class="_end">
 				<h3>答题结束：</h3>
-				<p>A 选项有 <span class="_a">0</span> 个</p>
-				<p>B 选项有 <span class="_b">0</span> 个</p>
-				<p>C 选项有 <span class="_c">0</span> 个</p>
-				<p>D 选项有 <span class="_d">0</span> 个</p>
+				<section>
+					<div class="_q _q1">
+						<h2>第 1 题：</h2>
+						<p>A 选项有 <span class="_a">0</span> 票 <span class="_percent_a"> 0% </span></p>
+						<p>B 选项有 <span class="_b">0</span> 票 <span class="_percent_b"> 0% </span></p>
+						<p>C 选项有 <span class="_c">0</span> 票 <span class="_percent_c"> 0% </span></p>
+						<p>D 选项有 <span class="_d">0</span> 票 <span class="_percent_d"> 0% </span></p>
+					</div>
+					<div class="_q _q2">
+						<h2>第 2 题：</h2>
+						<p>A 选项有 <span class="_a">0</span> 票 <span class="_percent_a"> 0% </span></p>
+						<p>B 选项有 <span class="_b">0</span> 票 <span class="_percent_b"> 0% </span></p>
+						<p>C 选项有 <span class="_c">0</span> 票 <span class="_percent_c"> 0% </span></p>
+						<p>D 选项有 <span class="_d">0</span> 票 <span class="_percent_d"> 0% </span></p>
+					</div>
+				</section>
 			</div>
 		</section>
 	</div>

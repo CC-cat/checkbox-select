@@ -1,85 +1,95 @@
 * {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 ._title {
-	font-size: 24px;
-	text-align: center;
-	padding-bottom: 20px;
-	margin: 40px 0 20px;
-	border-bottom: 1px solid #eee;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
 }
 
 ._content {
-	width: 920px;
-	height: auto;
-	margin: 0 auto;
+  width: 920px;
+  height: auto;
+  margin: 0 auto;
 }
 
 ._box ul li {
-	list-style: none;
+  list-style: none;
 }
 
 ._box ul li:hover {
-	background-color: #eee;
+  background-color: #eee;
 }
 
-._box ul li,
-._box ul li label,
-._box ul li input {
-	cursor: pointer;
-	padding: 10px 4px;
+._box ul li, ._box ul li label, ._box ul li input {
+  cursor: pointer;
+  padding: 10px 4px;
 }
 
 ._box {
-	overflow: hidden;
-	border-bottom: 1px dashed #ccc;
-	padding: 20px;
+  overflow: hidden;
+  border-bottom: 1px dashed #ccc;
+  padding: 20px;
 }
 
 ._box h3 {
-	font-size: 18px;
-	color: #00B895;
+  font-size: 18px;
+  color: #00B895;
 }
 
 ._end {
-	padding: 20px;
+  padding: 20px;
+  overflow: hidden;
 }
 
 ._end h3 {
-	font-size: 18px;
+  font-size: 18px;
 }
 
-._end p {
-	padding-left: 40px;
+._end ._q {
+  float: left;
+  margin: 0 20px;
 }
 
-._end p span {
-	color: rgb(65,155,249);
-	font-size: 18px;
+._end ._q span {
+  color: rgb(65, 155, 249);
+  font-size: 18px;
 }
 
+._btn {
+  position: fixed;
+  right: 300px;
+  top: 500px;
+}
 
-._goToEnd {
+._btn div {
   width: 120px;
   text-align: center;
   padding: 6px 12px;
-  margin: 40px auto;
-	border-radius: 4px;
+  margin: 20px 0;
+  border-radius: 4px;
   font-size: 18px;
   cursor: pointer;
   color: #00d4ac;
-	border: 1px solid #00B895;
+  border: 1px solid #00B895;
 }
 
-
-._goToEnd:hover {
-	color: #fff;
-	background: #00d4ac;
+._btn div:hover {
+  color: #fff;
+  background: #00d4ac;
 }
 
-._goToEnd:active,
-._goToEnd:focus {
-	color: #fff;
-	background: #00B895;
+._btn div:active, ._btn div:focus {
+  color: #fff;
+  background: #00B895;
 }
+
+._btn_active {
+  color: #fff !important;
+  background: #00B895;
+}
+
+/*Radio Specific styles*/
